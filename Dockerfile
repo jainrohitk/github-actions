@@ -1,2 +1,2 @@
-FROM jainrohit/mynginx:v1
+FROM jainrohitk/mynginx:v1
 COPY index.html /usr/share/nginx/html/
