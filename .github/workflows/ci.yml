@@ -8,12 +8,12 @@ on: # Triggers the workflow on push or pull request events but only for the "mai
   push:
     branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# A workflow run is made up of one or more jobs that can run sequentially
 
 jobs:
   docker:
@@ -25,7 +25,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
+          # A proper list of changed files within `super-linter`
           fetch-depth: 0
 
       - name: run superlinter
